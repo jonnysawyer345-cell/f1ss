@@ -1,80 +1,156 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Ticket Mockup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ticket</title>
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#111;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
+body{
+background:#1b1e23;
+color:white;
+height:100vh;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#20242a;
+padding:15px;
+font-size:18px;
+font-weight:600;
+}
+
+/* PURPLE TICKET AREA */
+
 .ticket{
-    background:#5a2ca0;
-    color:white;
-    width:350px;
-    margin:40px auto;
-    padding:30px 20px;
-    text-align:center;
-    border-radius:10px;
+background:#5b2bbf;
+padding:40px 20px;
+text-align:center;
 }
 
 .ticket h1{
-    font-size:28px;
-    margin-bottom:20px;
+font-size:32px;
+margin-bottom:20px;
 }
 
 .ticket h2{
-    font-weight:normal;
-    margin:10px 0;
+font-weight:400;
+margin-bottom:20px;
 }
 
 .code{
-    font-size:26px;
-    letter-spacing:2px;
-    margin:20px 0;
+font-size:28px;
+margin-bottom:25px;
+letter-spacing:3px;
 }
 
-.barcode{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-top:15px;
+/* BARCODE */
+
+.barcode-box{
+background:white;
+border-radius:15px;
+padding:20px;
+width:90%;
+margin:auto;
 }
 
-.barcode img{
-    width:100%;
+.barcode-box img{
+width:100%;
 }
 
-.info{
-    margin-top:20px;
-    text-align:left;
-    font-size:14px;
+.barcode-text{
+color:#444;
+margin-top:10px;
+font-size:14px;
 }
+
+/* WALLET BUTTON */
+
+.wallet{
+margin-top:25px;
+}
+
+.wallet button{
+background:black;
+color:white;
+border:none;
+padding:14px 20px;
+border-radius:12px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* BOTTOM INFO */
+
+.bottom{
+background:#20242a;
+padding:25px;
+}
+
+.bottom h3{
+font-size:14px;
+color:#bbb;
+margin-bottom:5px;
+}
+
+.bottom p{
+margin-bottom:15px;
+}
+
+.footer{
+text-align:center;
+padding:15px;
+color:#bbb;
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+Park Pass (Sun) – FORMULA 1 QATAR AIRWAYS GRAND PRIX
+</div>
+
 <div class="ticket">
-    <h1>General Admission</h1>
 
-    <h2>Child 3-14 Years</h2>
+<h1>General Admission</h1>
+<h2>Child 3-14 Years</h2>
 
-    <div class="code">GA0122</div>
+<div class="code">GA0122</div>
 
-    <div class="barcode">
-        <!-- fake barcode image -->
-        <img src="https://barcode.tec-it.com/barcode.ashx?data=GA0122&code=Code128">
-    </div>
+<div class="barcode-box">
+<img src="https://barcode.tec-it.com/barcode.ashx?data=GA0122&code=PDF417">
+<div class="barcode-text">Screenshots won't get you in.</div>
+</div>
 
-    <div class="info">
-        <p><b>Entrance:</b> Park Pass</p>
-        <p><b>Information:</b> General Admission</p>
-    </div>
+<div class="wallet">
+<button>✔ View in Wallet</button>
+</div>
+
+</div>
+
+<div class="bottom">
+<h3>ENTRANCE</h3>
+<p>PARK PASS</p>
+
+<h3>INFORMATION</h3>
+<p>GENERAL ADMISSION</p>
+</div>
+
+<div class="footer">
+1 of 2
 </div>
 
 </body>
 </html>
+```
