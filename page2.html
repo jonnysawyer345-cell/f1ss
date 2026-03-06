@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000; /* same dark background as the real ticket */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #fff;
+    }
+
+    .screen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* keeps proportions, no stretching */
+        display: block;
+    }
+
+    /* Overlay text container */
+    .infoBox {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 22px;
+        background: rgba(0,0,0,0.55); /* subtle dark overlay like the real UI */
+        box-sizing: border-box;
+    }
+
+    .label {
+        font-size: 12px;
+        opacity: 0.7;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+    }
+
+    .value {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 14px;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Bottom info section matching the real ticket -->
+    <div class="infoBox">
+        <div class="label">ENTRANCE</div>
+        <div class="value">FANGIO GRANDSTAND</div>
+
+        <div class="label">INFORMATION</div>
+        <div class="value">ADULT</div>
+        <div class="value"> FAN-D </div>
+        <div class="value"> ROW NN </div>
+        <div class="value"> SEAT 9 </div>
+    </div>
+
+</body>
+</html>
