@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>Ticket Mockup</title>
+
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #000; /* same dark background as the real ticket */
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color: #fff;
-    }
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#111;
+}
 
-    .screen {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover; /* keeps proportions, no stretching */
-        display: block;
-    }
+.ticket{
+    background:#5a2ca0;
+    color:white;
+    width:350px;
+    margin:40px auto;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:10px;
+}
 
-    /* Overlay text container */
-    .infoBox {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 22px;
-        background: rgba(0,0,0,0.55); /* subtle dark overlay like the real UI */
-        box-sizing: border-box;
-    }
+.ticket h1{
+    font-size:28px;
+    margin-bottom:20px;
+}
 
-    .label {
-        font-size: 12px;
-        opacity: 0.7;
-        letter-spacing: 0.5px;
-        margin-bottom: 4px;
-    }
+.ticket h2{
+    font-weight:normal;
+    margin:10px 0;
+}
 
-    .value {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 14px;
-    }
+.code{
+    font-size:26px;
+    letter-spacing:2px;
+    margin:20px 0;
+}
+
+.barcode{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.barcode img{
+    width:100%;
+}
+
+.info{
+    margin-top:20px;
+    text-align:left;
+    font-size:14px;
+}
 </style>
 </head>
+
 <body>
 
-    <!-- Bottom info section matching the real ticket -->
-    <div class="infoBox">
-        <div class="label">ENTRANCE</div>
-        <div class="value">FANGIO GRANDSTAND</div>
+<div class="ticket">
+    <h1>General Admission</h1>
 
-        <div class="label">INFORMATION</div>
-        <div class="value">ADULT</div>
-        <div class="value"> FAN-D </div>
-        <div class="value"> ROW NN </div>
-        <div class="value"> SEAT 9 </div>
+    <h2>Child 3-14 Years</h2>
+
+    <div class="code">GA0122</div>
+
+    <div class="barcode">
+        <!-- fake barcode image -->
+        <img src="https://barcode.tec-it.com/barcode.ashx?data=GA0122&code=Code128">
     </div>
+
+    <div class="info">
+        <p><b>Entrance:</b> Park Pass</p>
+        <p><b>Information:</b> General Admission</p>
+    </div>
+</div>
 
 </body>
 </html>
