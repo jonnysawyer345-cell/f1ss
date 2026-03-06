@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Full Screen Photo</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background: #000;
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
     }
 
-    img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover; /* fills screen without stretching */
-      display: block;
+    .screen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* no stretching */
+        display: block;
     }
-  </style>
+
+    /* Button on top of the FIRST screenshot */
+    #goBtn {
+        position: absolute;
+        bottom: 40px; /* adjust to match your screenshot */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 22px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 12px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+</style>
 </head>
 <body>
 
-  <img src="IMG_1531.jpeg" alt="photo">
+    <!-- FIRST screenshot with button on it -->
+    <div class="wrapper">
+        <img src="IMG_1531.jpeg" class="screen">
+        <button id="goBtn" onclick="window.location.href='page2.html'">
+            View Ticket
+        </button>
+    </div>
 
-  <img src="IMG_1535.png" alt="photo"
+    <!-- SECOND screenshot under it -->
+    <img src="IMG_1535.png" class="screen">
 
 </body>
 </html>
